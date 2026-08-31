@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="해외축구 뭉쳐라 활동 규정과 주요 링크, 협력업체 안내">
+  <title>해외축구 뭉쳐라 활동 규정</title>
+  <style>
+    :root{
+      --bg:#08111f;
+      --panel:#111c2f;
+      --panel2:#17253b;
+      --text:#f7f9fc;
+      --muted:#aebbd0;
+      --yellow:#ffcc33;
+      --blue:#63b3ff;
+      --green:#39d98a;
+      --danger:#ff7676;
+      --line:rgba(255,255,255,.10);
+      --shadow:0 18px 50px rgba(0,0,0,.28);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Pretendard,"Noto Sans KR",Apple SD Gothic Neo,sans-serif;
+      color:var(--text);
+      line-height:1.65;
+      background:
+        radial-gradient(circle at top right,rgba(255,204,51,.12),transparent 32%),
+        linear-gradient(180deg,#08111f,#0d1728);
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(920px,calc(100% - 24px));margin:auto;padding:18px 0 70px}
+    .hero{
+      position:relative;
+      overflow:hidden;
+      padding:34px 24px;
+      border:1px solid var(--line);
+      border-radius:26px;
+      background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.03));
+      box-shadow:var(--shadow);
+    }
+    .hero:after{
+      content:"⚽";
+      position:absolute;
+      right:-10px;
+      bottom:-44px;
+      font-size:150px;
+      opacity:.08;
+      transform:rotate(-12deg);
+    }
+    .eyebrow{
+      display:inline-flex;
+      padding:7px 11px;
+      border-radius:999px;
+      background:rgba(255,204,51,.14);
+      color:var(--yellow);
+      font-weight:800;
+      font-size:11px;
+      letter-spacing:.04em;
+    }
+    h1{
+      margin:15px 0 10px;
+      font-size:clamp(32px,8vw,54px);
+      line-height:1.08;
+      letter-spacing:-.04em;
+    }
+    .hero p{margin:0;color:var(--muted);max-width:660px}
+    .nav{
+      display:grid;
+      grid-template-columns:repeat(6,1fr);
+      gap:9px;
+      margin:18px 0 26px;
+    }
+    .nav a,.link-btn{
+      min-height:54px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:11px;
+      border:1px solid var(--line);
+      border-radius:15px;
+      background:rgba(255,255,255,.05);
+      font-weight:800;
+      text-align:center;
+      transition:.2s;
+    }
+    .nav a:hover,.link-btn:hover{transform:translateY(-2px);background:rgba(255,255,255,.09)}
+    .section-title{margin:34px 4px 12px;font-size:22px;letter-spacing:-.02em}
+    details{
+      margin-bottom:12px;
+      border:1px solid var(--line);
+      border-radius:19px;
+      background:rgba(17,28,47,.86);
+      overflow:hidden;
+      box-shadow:0 12px 24px rgba(0,0,0,.12);
+    }
+    summary{
+      position:relative;
+      padding:19px 54px 19px 20px;
+      cursor:pointer;
+      list-style:none;
+      font-weight:900;
+      font-size:16px;
+    }
+    summary::-webkit-details-marker{display:none}
+    summary:after{
+      content:"+";
+      position:absolute;
+      right:20px;
+      top:50%;
+      transform:translateY(-50%);
+      color:var(--yellow);
+      font-size:25px;
+      font-weight:500;
+    }
+    details[open] summary:after{content:"−"}
+    .content{padding:0 20px 22px;color:#dce5f3}
+    .content p{margin:8px 0}
+    .content ul{margin:9px 0;padding-left:20px}
+    .content li{margin:5px 0}
+    .rule-box{
+      margin:13px 0;
+      padding:14px 15px;
+      border-radius:13px;
+      background:var(--panel2);
+      border:1px solid var(--line);
+    }
+    .warning{
+      color:#ffd0d0;
+      border-color:rgba(255,118,118,.35);
+      background:rgba(255,118,118,.08);
+    }
+    .important{color:var(--yellow)}
+    .pending{color:var(--blue);font-weight:900}
+    .example{
+      display:inline-block;
+      padding:8px 12px;
+      border-radius:10px;
+      background:#0b1424;
+      color:var(--green);
+      font-weight:800;
+    }
+    .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}
+    .chips span{
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.07);
+      border:1px solid var(--line);
+      font-size:13px;
+      font-weight:700;
+    }
+    .links-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:10px;
+    }
+    .link-btn{
+      justify-content:flex-start;
+      gap:10px;
+      padding:14px 15px;
+    }
+    .partners{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:13px;
+    }
+    .partners details{margin:0}
+    .partners summary{
+      min-height:68px;
+      display:flex;
+      align-items:center;
+      font-size:18px;
+      background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.03));
+    }
+    .partner-note{color:var(--muted)}
+    .go{
+      display:inline-flex;
+      margin-top:8px;
+      padding:8px 11px;
+      border-radius:10px;
+      background:rgba(255,204,51,.13);
+      color:var(--yellow);
+      font-weight:800;
+    }
+    .price-table{
+      width:100%;
+      border-collapse:collapse;
+      margin:12px 0 4px;
+      font-size:14px;
+    }
+    .price-table th,.price-table td{
+      padding:10px 8px;
+      border:1px solid var(--line);
+      text-align:center;
+      vertical-align:middle;
+    }
+    .price-table th{
+      background:rgba(255,255,255,.06);
+      color:#fff;
+      font-weight:800;
+    }
+    .price-table td:first-child{text-align:left}
+    .price-table .discount{color:var(--yellow)}
+    .staff-table-wrap{
+      width:100%;
+      overflow-x:auto;
+      border:1px solid var(--line);
+      border-radius:19px;
+      background:rgba(17,28,47,.86);
+      box-shadow:0 12px 24px rgba(0,0,0,.12);
+    }
+    .staff-table{width:100%;border-collapse:collapse;text-align:left}
+    .staff-table th,.staff-table td{padding:13px 16px;border-bottom:1px solid var(--line)}
+    .staff-table th{background:rgba(255,255,255,.06);font-size:14px;font-weight:900}
+    .staff-table td{font-size:14px}
+    .staff-table td:first-child{font-weight:800}
+    .staff-table td:nth-child(2){font-weight:700}
+    .staff-table td:nth-child(3){color:var(--muted);font-size:13px}
+    .staff-table tbody tr:last-child td{border-bottom:none}
+    .staff-table tbody tr:hover{background:rgba(255,255,255,.04)}
+    footer{margin-top:30px;text-align:center;color:var(--muted);font-size:13px}
+    .top{
+      position:fixed;
+      right:16px;
+      bottom:16px;
+      width:46px;
+      height:46px;
+      border-radius:50%;
+      border:1px solid var(--line);
+      background:#17253b;
+      color:#fff;
+      box-shadow:var(--shadow);
+      cursor:pointer;
+    }
+    @media(max-width:720px){
+      .nav{grid-template-columns:repeat(2,1fr)}
+      .partners{grid-template-columns:1fr}
+      .hero{padding:28px 20px;border-radius:22px}
+    }
+  </style>
+</head>
+<body>
+<main class="wrap">
+  <section class="hero">
+    <span class="eyebrow">Watch Football Together Community Guide</span>
+    <h1>해외축구 뭉쳐라<br>활동 규정</h1>
+    <p>원활하고 즐거운 해뭉 활동을 위해 아래 내용을 꼭 확인해주세요.</p>
+  </section>
+
+  <nav class="nav">
+    <a href="#join">👋 입장 안내</a>
+    <a href="#money">🪙 회비 안내</a>
+    <a href="#chat">💬 채팅 규정</a>
+    <a href="#watch">🍻 단체관람</a>
+    <a href="#links">🔗 링크</a>
+    <a href="#partners">🤝 협력업체</a>
+  </nav>
+
+  <h2 class="section-title" id="join">👋 입장 후 바로 할 일</h2>
+
+  <details open>
+    <summary>프로필 수정</summary>
+    <div class="content">
+      <p>프로필은 아래 형식으로 설정해주세요.</p>
+      <div class="example">이름 (응원팀)</div>
+      <ul>
+        <li>여러 팀을 응원하면 <span class='important'>띄어쓰기</span>로 구분합니다</li>
+        <li>같은 리그에서 두 팀 이상 함께 표기할 수 없습니다</li>
+        <li>응원팀이 없으면 <span class="pending">FA</span>로 표기합니다</li>
+        <li class="important">공지방·채팅방·디스코드의 프로필을 통일합니다</li>
+        <li>목록에 없는 팀은 알아보기 쉽게 작성해주세요.</li>
+      </ul>
+      <div class="chips">
+        <span>리버풀</span><span>맨시티</span><span>맨유</span><span>아스날</span><span>첼시</span><span>토트넘</span>
+        <span>레알</span><span>바르사</span><span>ATM</span><span>도르트문트</span><span>뮌헨</span><span>나폴리</span>
+        <span>밀란</span><span>유베</span><span>인테르</span><span>수원</span><span>전북</span><span>울산</span><span>인천</span><span>FC서울</span>
+      </div>
+      <div class="rule-box warning">입장 후 <span class="pending">24시간 이내</span>에 변경하지 않으면 강제 퇴장될 수 있습니다</div>
+    </div>
+  </details>
+
+  <details>
+    <summary>입장인사·자기소개</summary>
+    <div class="content">
+      <ul>
+        <li class="important">좋아하는 팀</li>
+        <li>해뭉에 가입한 이유</li>
+        <li>앞으로 하고 싶은 활동</li>
+      </ul>
+      <p>위 내용을 활용해 간단한 자기소개 부탁드립니다</p>
+    </div>
+  </details>
+
+  <h2 class="section-title" id="money">🪙 해뭉 활동비</h2>
+
+  <details>
+    <summary>회비 안내</summary>
+    <div class="content">
+      <p><B>✨금액 : 월 4,000원</B></p>
+      <ul>
+        <li>납부 방식 : 활동 기간 동안 회비를 매월 10일까지 <span class="important">전액 납부</span></li>
+        <li>납부 기간 : 회비 입금하는 달의 10일까지 (예 : 10월 입금 예정자는 10/10일까지 납부)</li>
+        <li class="important">미납 시 활동 의사가 없음으로 간주하고 탈퇴 처리</li>
+      </ul>
+    </div>
+  </details>
+
+  <h2 class="section-title" id="chat">💬 채팅방 규정</h2>
+
+  <details>
+    <summary>공지방 이용</summary>
+    <div class="content">
+      <p>공지방은 중요 공지, 단관 안내, 정산 등 운영진이 꼭 전달해야 하는 내용을 올리는 공간입니다</p>
+      <ul>
+        <li class="important">공지방은 반드시 입장해주세요</li>
+        <li>일반 회원의 채팅은 금지됩니다</li>
+        <li>공지방에 <span class="pending">3회 이상</span> 채팅 시 공식 경고, <span class="pending">4회</span> 채팅 시 강제 퇴장됩니다</li>
+        <li>공지방에서 나가면 <span class="important">모임 탈퇴</span>로 간주합니다</li>
+      </ul>
+    </div>
+  </details>
+
+<details open>
+    <summary>채팅방 이용 수칙</summary>
+    <div class="content">
+      <p>모두가 해뭉을 편하게 이용할 수 있도록 아래 규정을 꼭 지켜주세요</p>
+      <ul>
+        <li><span class="important">축구와 관련없는 내용</span> 지나친 도배 금지</li>
+        <li>치나친 욕설 및 비방 금지</il>
+        <li>인종·성별·출신지역·장애 등에 대한 차별성 발언 <span class="pending">절대 금지</span></il>
+        <li>정치적·종교적 발언 금지</il>
+        <li>협의되지 않은 광고성·상업성 채팅 금지</il>
+      <div class="rule-box warning">규정 위반 시 운영진 판단에 따라 공식 경고 혹은 <span class="important">강제 탈퇴</span>조치 합니다</div>
+      </ul>
+    </div>
+  </details>
+
+  <details>
+    <summary>재입장 정책</summary>
+    <div class="content">
+      <p><b>재입장 기준</b> : 탈퇴 사실을 미리 고지한 경우 재입장 요청 가능</p>
+      <ul>
+        <p>- 재입장 절차 : 재가입 신청 후 운영진 과반수 동의 하 재입장 및 활동 가능</p>
+      <div class="rule-box warning">활동 규정 위반으로 강제 퇴장 당한 경우 영구적으로 재입장 할 수 없습니다</div>
+      </ul>
+    </div>
+  </details>
+
+   <details>
+    <summary>멤버 간 분쟁</summary>
+    <div class="content">
+      <p>당사자끼리 해결하기 어려운 분쟁 발생 시 운영진에게 제보해주세요</p>
+      <ul>
+        <p>- 당시 상황 캡처 등을 통해 내용을 상세히 알려주세요</pl>
+        <p>- 운영진이 모든 당사자의 이야기를 듣고 회의를 통해 추후 조치하겠습니다</p>
+      </ul>
+    </div>
+  </details>
+
+  <h2 class="section-title" id="watch">🍻 단체관람</h2>
+
+  <details>
+    <summary>참석 신청과 진행</summary>
+    <div class="content">
+      <p><b>✨진행 절차 : 단관 신청 접수 → 공지방 참석 투표 → 참여 여부 확정 → 단관 진행 → 정산</b></p>
+      <ul>
+        <li>공지방 투표가 올라오면 참여 여부를 최대한 빨리 선택해주세요</li>
+        <p>- 일정 공지에 <span class='important'>참석</span> 투표 해주시면 됩니다</p>
+        <p>- 토요일 야간, 빅클럽 더비전 등 인기 경기는 <span class="important">조기 마감</span>될 수 있습니다</p>
+        <li><b>단관 신청 방법</b> : <span class="important">경기 5일 전까지 공지가 없다면</span> 각 팀별 운영진에게 직접 문의
+        <li><span class="pending">4명 이하</span>가 모이면 공식 단관이 취소될 수 있습니다.</li>
+        <p>- 공식 단관이 취소되어도 소규모 단관 진행 가능합니다 (장소 예약, 정산 등에서 운영진의 지원은 제한적입니다)</p>
+        <p>- 소규모 경기는 공지방에 올라오지 않고 팀별 톡방이나 운영진의 개별 안내로 진행될 수 있습니다</p>
+        <li>디스코드 온라인 단관도 진행 예정이며, 중계는 운영진에서 제공하지 않습니다</li>
+      </ul>
+    </div>
+  </details>
+
+  <details>
+    <summary>노쇼 및 취소</summary>
+    <div class="content">
+      <p>참여가 어려워지면 최대한 빠르게 운영진에게 알려주세요</p>
+      <ul>
+        <li>예약금이 발생한 경우 환불이 어려울 수 있습니다</li>
+        <li><span class="pending">당일 노쇼</span>의 경우 패널티가 부여됩니다</li>
+        <p>- 패널티 부여 : 1회 노쇼 시 경고, 2회 이상 노쇼 시 <span class="important">정산에 포함</span></p>
+      </ul>
+    </div>
+  </details>
+
+  <h2 class="section-title" id="links">🔗 주요 링크</h2>
+  <div class="links-grid">
+    <a class="link-btn" href="https://open.kakao.com/o/g5LxziJi" target="_blank" rel="noopener">📢 공지방</a>
+    <a class="link-btn" href="https://open.kakao.com/o/gKy4yiJi" target="_blank" rel="noopener">💬 채팅방</a>
+    <a class="link-btn" href="https://open.kakao.com/o/gwHDSfEf" target="_blank" rel="noopener">⚽ 케이리그-케뭉</a>
+    <a class="link-btn" href="https://open.kakao.com/o/gZmJnQEh" target="_blank" rel="noopener">🎮 게임모임-겜뭉</a>
+    <a class="link-btn" href="https://open.kakao.com/o/gWL1GmCf" target="_blank" rel="noopener">🥅 풋살모임-차뭉</a>
+    <a class="link-btn" href="https://open.kakao.com/o/g5wWJLQh" target="_blank" rel="noopener">🏃 러닝모임-런뭉</a>
+    <a class="link-btn" href="https://discord.gg/hSgGZa923" target="_blank" rel="noopener">🎙 해뭉 디스코드</a>
+    <a class="link-btn" href="https://www.instagram.com/watchfootball_together?igsh=MThldHphcG42a3EzdA==" target="_blank" rel="noopener">📷 해뭉 인스타</a>
+  </div>
+
+  <h2 class="section-title" id="staff">👥 운영진 안내</h2>
+ <details>
+   <summary>운영진 구성 확인하기</summary>
+   <div class="content">
+    <div class="staff-table-wrap">
+     <table class="staff-table">
+       <thead><tr><th>담당</th><th>운영진</th><th>비고</th></tr></thead>
+       <tbody>
+         <tr><td>모임장</td><td>나중식</td><td>-</td></tr>
+         <tr><td>부모임장</td><td>최가람 · 전근배</td><td>-</td></tr>
+         <tr><td>총무</td><td>문인한</td><td>-</td></tr>
+         <tr><td>리버풀</td><td>강대안</td><td>팀 담당</td></tr>
+         <tr><td>맨체스터 시티</td><td>이현지</td><td>현재 대행 : 최가람</td></tr>
+         <tr><td>맨체스터 유나이티드</td><td>조필재</td><td>팀 담당</td></tr>
+         <tr><td>아스날</td><td>전근배</td><td>팀 담당</td></tr>
+         <tr><td>첼시</td><td>박지원</td><td>팀 담당</td></tr>
+         <tr><td>토트넘</td><td>김효선</td><td>팀 담당</td></tr>
+         <tr><td>K리그</td><td>이주한</td><td>리그 담당</td></tr>
+         <tr><td>기타 구단 · 리그</td><td>노규석</td><td>통합 담당</td></tr>
+         <tr><td>차뭉 · 운영 지원</td><td>김용민</td><td>진행 지원</td></tr>
+         <tr><td>SNS · 대외협력</td><td>박결</td><td>홍보 및 협업</td></tr>
+       </tbody>
+     </table>
+    </div>
+   </div>
+ </details>
+
+  <h2 class="section-title" id="partners">🤝 해뭉 협력업체</h2>
+  <p>협력 업체 관련 소식은 해뭉 인스타를 통해 먼저 확인하실 수 있습니다</p>
+  <section class="partners">
+    <details>
+      <summary>🏟 신촌 축구펍 오퍼스</summary>
+      <div class="content">
+        <p class="partner-note">흑맥주 <span class="important">10% 할인</span></p>
+        <p>- 1인 1주문 필수 (논알콜 맥주 및 탄산 음료 구비</p>
+        <p>- 외부 음식 반입 가능 (단, 외부 음료 반입 금지)</p>
+        <a class="go" href="https://www.instagram.com/opusbar88?igsh=Z2E4NGVnZ2ltcm1l" target="_blank" rel="noopener">인스타 바로가기</a>
+      </div>
+    </details>
+
+    <details>
+      <summary>📺 유튜브 와글 풋볼</summary>
+      <div class="content">
+        <p class="partner-note">해외축구 콘텐츠 협력 채널입니다</p>
+        <a class="go" href="https://youtube.com/@wagglefootball?si=V0m7wcptms2MvLtx" target="_blank" rel="noopener">유튜브 바로가기</a>
+      </div>
+    </details>
+
+    <details>
+      <summary>👕 킷샵 유니폼 스토어</summary>
+      <div class="content">
+        <ul>
+          <li>외부 마킹 7,000원 / 패치 3,000원</li>
+          <li>구매 마킹 부착비 할인</li>
+          <li>자컷 네임셋 7,000원 / 렉스트라 10,000원</li>
+          <li>클래식 유니폼 5,000원 할인</li>
+          <li>판타지리그 우승자 유니폼 혜택</li>
+        </ul>
+        <a class="go" href="https://www.instagram.com/kit.shop.official?igsh=MTBlZGRyZ25oNzFiOA==" target="_blank" rel="noopener">인스타 바로가기</a>
+      </div>
+    </details>
+
+    <details>
+      <summary>🎉 킥앤스윙 파티룸</summary>
+      <div class="content">
+        <p class="important">해뭉 회원 전 패키지 20% 할인</p>
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th>패키지</th>
+              <th>이용 시간</th>
+              <th>정상가</th>
+              <th>할인가</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>워밍업</td>
+              <td>월~금 11:00~16:00</td>
+              <td>5만원</td>
+              <td class="discount">4만원</td>
+            </tr>
+            <tr>
+              <td>플레이볼 평일</td>
+              <td>월~목 17:00~23:00</td>
+              <td>8만원</td>
+              <td class="discount">6.4만원</td>
+            </tr>
+            <tr>
+              <td>플레이볼 주말</td>
+              <td>금·토·일 중 6시간</td>
+              <td>10만원</td>
+              <td class="discount">8만원</td>
+            </tr>
+            <tr>
+              <td>더블헤더 올나잇</td>
+              <td>17:00~익일 09:00</td>
+              <td>15만원</td>
+              <td class="discount">12만원</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>4인 초과 시 1인당 1.6만원 추가되며, 워밍업은 1인당 1만원이 추가됩니다.</p>
+        <a class="go" href="https://www.instagram.com/kickandswing_sc?igsh=MWxoa3p6dTd6NXlxMQ==" target="_blank" rel="noopener">인스타 바로가기</a>
+      </div>
+    </details>
+
+    <details>
+      <summary>🍺 을지로 우프라운지</summary>
+      <div class="content">
+        <ul>
+          <li>프라이빗 라운지 전체 대관 2만원 할인</li>
+          <li>호스트 주최 단관 10% 할인</li>
+          <li>예약 선착순</li>
+        </ul>
+        <a class="go" href="https://www.instagram.com/outoffield.kr?igsh=MW51Zml0eG05OWsxeg==" target="_blank" rel="noopener">인스타 바로가기</a>
+      </div>
+    </details>
+  </section>
+
+  <footer>본 규정은 운영 상황에 따라 변경될 수 있습니다.</footer>
+</main>
+
+<button class="top" onclick="scrollTo({top:0,behavior:'smooth'})" aria-label="맨 위로">↑</button>
+</body>
+</html>
